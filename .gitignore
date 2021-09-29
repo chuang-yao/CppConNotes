@@ -40,3 +40,7 @@ cmake-build-release/
 **.cache/
 **/build/
 **/compile_commands.json
+
+# vs
+.vs/
+out/
