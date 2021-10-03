@@ -34,3 +34,7 @@ endif()
 if(Threads_FOUND)
   target_link_libraries(qf PUBLIC Threads::Threads)
 endif()
+
+if(MINGW)
+  target_link_libraries(qf PUBLIC ws2_32)
+endif()

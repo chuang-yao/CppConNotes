@@ -7,7 +7,7 @@
 #include <numeric>
 #include <vector>
 
-#ifdef _WIN32
+#ifdef _MSC_VER
 #include <future>
 #else
 #include <boost/asio.hpp>
@@ -61,7 +61,7 @@ void MCEuroOptPricer::calculate_() {
 // compute the option price
 void MCEuroOptPricer::computePrice_() {
   if (runParallel_) {
-#ifdef _WIN32
+#ifdef _MSC_VER
     computePriceWithAsync_();
 #else
     computePriceWithPool_();
@@ -93,7 +93,7 @@ void MCEuroOptPricer::computePriceNoParallel_() {
       std::accumulate(discountedPayoffs.begin(), discountedPayoffs.end(), 0.0);
 }
 
-#ifdef _WIN32
+#ifdef _MSC_VER
 // multithreading with std::async
 // std::async is currently pooled on Windows 10, but NOT on UNIX-like systems
 void MCEuroOptPricer::computePriceWithAsync_() {

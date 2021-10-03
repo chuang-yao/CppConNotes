@@ -30,7 +30,7 @@ private:
 
   // compare results
   void computePriceNoParallel_();
-#ifdef _WIN32
+#ifdef _MSC_VER
   void computePriceWithAsync_();
 #else
   void computePriceWithPool_();
