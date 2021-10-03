@@ -44,3 +44,4 @@ cmake-build-release/
 # vs
 .vs/
 out/
+**/CMakeSettings.json
