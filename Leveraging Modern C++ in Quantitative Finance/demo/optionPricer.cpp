@@ -30,15 +30,15 @@ auto main() -> int {
   const int seed = 0;
   const Real q = 1.0;
 
-  MCEuroOptPricer x(S, K, r, vol, T, OptionType::Call, m, n, false, seed, q);
-  std::cout << x() << ' ' << x.time() << "ms\n";
+  // MCEuroOptPricer x(S, K, r, vol, T, OptionType::Call, m, n, false, seed, q);
+  // std::cout << x() << ' ' << x.time() << "ms\n";
 
   MCEuroOptPricer y(S, K, r, vol, T, OptionType::Put, m, n, true, seed, q);
-  std::cout << y() << ' ' << y.time() << "ms\n";
+  // std::cout << y() << ' ' << y.time() << "ms\n";
 
-  BSMOptPricer a(S, K, r, vol, T, OptionType::Call, q);
-  std::cout << a() << ' ' << a.time() << "ms\n";
+  // BSMOptPricer a(S, K, r, vol, T, OptionType::Call, q);
+  // std::cout << a() << ' ' << a.time() << "ms\n";
 
-  BSMOptPricer b(S, K, r, vol, T, OptionType::Put, q);
-  std::cout << b() << ' ' << b.time() << "ms\n";
+  // BSMOptPricer b(S, K, r, vol, T, OptionType::Put, q);
+  // std::cout << b() << ' ' << b.time() << "ms\n";
 }
