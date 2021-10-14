@@ -34,6 +34,7 @@ auto main() -> int {
   // std::cout << x() << ' ' << x.time() << "ms\n";
 
   MCEuroOptPricer y(S, K, r, vol, T, OptionType::Put, m, n, true, seed, q);
+  std::cout << y() << '\n';
   // std::cout << y() << ' ' << y.time() << "ms\n";
 
   // BSMOptPricer a(S, K, r, vol, T, OptionType::Call, q);
